@@ -724,11 +724,7 @@
             font-size: 12px;
         }
 
-        /* ==================================================
-           PORTFOLIO
-           All screenshots are displayed at exactly
-           the same size.
-        ================================================== */
+        /* Portfolio */
 
         .portfolio {
             background: var(--white);
@@ -746,14 +742,11 @@
             width: 100%;
             height: 620px;
             overflow: hidden;
-
-            /* No frame */
             background: transparent;
             border: none;
             border-radius: 0;
             box-shadow: none;
             padding: 0;
-
             transition: transform 0.3s ease;
         }
 
@@ -761,18 +754,13 @@
             display: block;
             width: 100%;
             height: 100%;
-
-            /* Makes every screenshot fill the same box */
             object-fit: cover;
             object-position: top center;
-
             margin: 0;
             padding: 0;
-
             border: none;
             border-radius: 0;
             box-shadow: none;
-
             transition: transform 0.45s ease;
         }
 
@@ -1072,47 +1060,36 @@
             transform: translateY(0);
         }
 
-        /* Tablet */
+        /* Tablet & Mobile Media Queries */
 
         @media (max-width: 1000px) {
-
             .hero-grid {
                 gap: 45px;
             }
-
             .portfolio-showcase {
                 grid-template-columns: repeat(2, 1fr);
             }
-
             .portfolio-photo {
                 height: 600px;
             }
-
             .testimonial-card {
                 padding: 50px 45px;
             }
         }
 
-        /* Mobile */
-
         @media (max-width: 780px) {
-
             .container {
                 width: min(calc(100% - 30px), var(--max));
             }
-
             .section {
                 padding: 80px 0;
             }
-
             .nav-inner {
                 height: 68px;
             }
-
             .menu-toggle {
                 display: block;
             }
-
             .nav-links {
                 position: fixed;
                 top: 68px;
@@ -1128,75 +1105,46 @@
                 transform: translateX(100%);
                 transition: 0.3s;
             }
-
             .nav-links.open {
                 transform: translateX(0);
             }
-
             .nav-links a {
                 font-size: 16px;
             }
-
             .hero {
                 padding: 65px 0 75px;
             }
-
-            .hero-grid {
+            .hero-grid, .about-grid, .contact-grid {
                 grid-template-columns: 1fr;
                 gap: 45px;
             }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 45px;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 45px;
-            }
-
             .hero h1 {
                 font-size: 48px;
             }
-
             .hero-photo img {
                 height: 470px;
             }
-
             .hero-card {
                 left: 10px;
                 bottom: 25px;
             }
-
-            .services-grid {
+            .services-grid, .tools-grid {
                 grid-template-columns: 1fr;
             }
-
-            .tools-grid {
-                grid-template-columns: 1fr;
-            }
-
-            /* Portfolio */
-
             .portfolio-showcase {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 12px;
             }
-
             .portfolio-photo {
                 height: 500px;
             }
-
             .tools-bottom {
                 flex-direction: column;
                 align-items: flex-start;
             }
-
             .testimonial-card {
                 padding: 35px 25px;
             }
-
             .testimonial-card blockquote {
                 max-width: none;
                 font-size: 17px;
@@ -1204,69 +1152,44 @@
             }
         }
 
-        /* Small Mobile */
-
         @media (max-width: 480px) {
-
             .hero h1 {
                 font-size: 32px;
             }
-
             .hero-lead {
                 font-size: 15px;
             }
-
             .hero-proof {
                 gap: 15px;
             }
-
             .proof-item strong {
                 font-size: 15px;
             }
-
             .mini-stats {
                 grid-template-columns: 1fr;
             }
-
             .hero-photo img {
                 height: 400px;
             }
-
             .hero-card {
                 left: 10px;
             }
-
             .tool-list {
                 grid-template-columns: 1fr;
             }
-
-            /* Portfolio */
-
             .portfolio-showcase {
                 grid-template-columns: 1fr;
             }
-
             .portfolio-photo {
                 height: 620px;
             }
-
-            .portfolio-label {
-                margin-top: 22px;
-            }
-
             .footer-inner {
                 flex-direction: column;
                 align-items: flex-start;
             }
-
-            .testimonial-controls {
-                gap: 15px;
-            }
-
             .testimonial-card {
                 padding: 30px 22px;
             }
-
             .testimonial-card blockquote {
                 font-size: 16px;
                 line-height: 1.6;
@@ -1278,18 +1201,14 @@
 <body>
 
     <!-- Navigation -->
-
     <nav>
         <div class="container nav-inner">
-
             <a href="#home" class="logo">
                 Z<span>C</span>
             </a>
-
             <button class="menu-toggle" aria-label="Toggle menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
-
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
@@ -1299,956 +1218,413 @@
                 <a href="#testimonials">Testimonials</a>
                 <a href="#contact" class="nav-cta">Let’s Talk</a>
             </div>
-
         </div>
     </nav>
 
     <main>
-
-        <!-- Hero -->
-
+        <!-- Hero Section -->
         <section class="hero" id="home">
-
             <div class="container hero-grid">
-
                 <div class="hero-copy reveal">
-
                     <div class="hero-kicker">
                         <i class="fa-solid fa-circle"></i>
                         Executive & Digital Support
                     </div>
-
                     <h1>
                         <span class="typed"></span>
                         <span class="cursor">|</span>
                     </h1>
-
                     <p class="hero-lead">
                         I help busy professionals and businesses stay organized,
                         productive, and digitally supported, with expertise spanning
                         executive administration, travel coordination, websites,
                         content, and business operations.
                     </p>
-
                     <div class="hero-actions">
-
                         <a href="#contact" class="btn btn-primary">
                             Let’s Work Together
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
-
                         <a href="#work" class="btn btn-secondary">
                             View My Work
                         </a>
-
                     </div>
-
                     <div class="hero-proof">
-
                         <div class="proof-item">
                             <strong>5+</strong>
                             <span>Years experience</span>
                         </div>
-
                         <div class="proof-item">
                             <strong>Multi</strong>
                             <span>Skilled support</span>
                         </div>
-
                         <div class="proof-item">
                             <strong>Detail</strong>
                             <span>Focused execution</span>
                         </div>
-
                     </div>
-
                 </div>
-
                 <div class="hero-visual reveal">
-
                     <div class="hero-photo">
-
                         <img
                             src="https://i.ibb.co/G4hX476D/Zeeheadshot.png"
                             alt="Zhenddie Cinco"
                             onerror="this.onerror=null;this.src='https://i.ibb.co/LdRcgvng/headshot.jpg';"
                         >
-
                     </div>
-
                     <div class="hero-card">
-
                         <div class="hero-card-icon">
                             <i class="fa-solid fa-check"></i>
                         </div>
-
                         <div>
                             <strong>Reliable Support</strong>
                             <span>Organized. Responsive. Detail-focused.</span>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
-        <!-- About -->
-
+        <!-- About Section -->
         <section class="section about" id="about">
-
             <div class="container about-grid">
-
                 <div class="about-image reveal">
-
                     <img
                         src="https://i.ibb.co/G4hX476D/Zeeheadshot.png"
                         alt="Zhenddie Cinco"
                         onerror="this.onerror=null;this.src='https://i.ibb.co/LdRcgvng/headshot.jpg';"
                     >
-
                 </div>
-
                 <div class="about-copy reveal">
-
-                    <div class="section-kicker">
-                        About Me
-                    </div>
-
-                    <h3>
-                        More than administrative support.
-                    </h3>
-
+                    <div class="section-kicker">About Me</div>
+                    <h3>More than administrative support.</h3>
                     <p>
                         I’m a versatile Executive Assistant and Digital Support
                         Specialist who helps professionals and businesses keep
                         their work organized, efficient, and moving forward.
                     </p>
-
                     <p>
                         My experience spans executive and administrative support,
                         operations, payroll and timekeeping, travel coordination,
                         customer service, websites, content, and digital business support.
                     </p>
-
                     <p>
                         I bring a practical, detail-focused approach to every task —
                         whether it’s managing day-to-day priorities, coordinating travel,
                         supporting clients, maintaining digital platforms, or improving
                         internal workflows.
                     </p>
-
                     <div class="mini-stats">
-
                         <div class="mini-stat">
                             <strong>5+</strong>
                             <span>Years of experience</span>
                         </div>
-
                         <div class="mini-stat">
                             <strong>40+</strong>
                             <span>Digital tools used</span>
                         </div>
-
                         <div class="mini-stat">
                             <strong>Multi</strong>
                             <span>Skilled & versatile</span>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
-        <!-- Services -->
-
+        <!-- Services Section -->
         <section class="section services" id="services">
-
             <div class="container">
-
                 <div class="section-head reveal">
-
-                    <div class="section-kicker">
-                        What I Do
-                    </div>
-
-                    <h2>
-                        Support that keeps business moving.
-                    </h2>
-
-                    <p>
-                        Flexible, reliable support across administration,
-                        operations, client service, travel, and digital work.
-                    </p>
-
+                    <div class="section-kicker">What I Do</div>
+                    <h2>Support that keeps business moving.</h2>
+                    <p>Flexible, reliable support across administration, operations, client service, travel, and digital work.</p>
                 </div>
-
                 <div class="services-grid">
-
                     <article class="service-card reveal">
-
-                        <div class="service-icon">
-                            <i class="fa-solid fa-briefcase"></i>
-                        </div>
-
+                        <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
                         <div>
                             <h3>Executive & Administrative Support</h3>
-                            <p>
-                                Calendar, email, document, scheduling, research,
-                                coordination, and day-to-day executive support.
-                            </p>
+                            <p>Calendar, email, document, scheduling, research, coordination, and day-to-day executive support.</p>
                         </div>
-
                     </article>
-
                     <article class="service-card reveal">
-
-                        <div class="service-icon">
-                            <i class="fa-solid fa-clock"></i>
-                        </div>
-
+                        <div class="service-icon"><i class="fa-solid fa-clock"></i></div>
                         <div>
                             <h3>Payroll & Timekeeping</h3>
-                            <p>
-                                Time tracking, payroll-related administration,
-                                records, reporting, and organized employee support.
-                            </p>
+                            <p>Time tracking, payroll-related administration, records, reporting, and organized employee support.</p>
                         </div>
-
                     </article>
-
                     <article class="service-card reveal">
-
-                        <div class="service-icon">
-                            <i class="fa-solid fa-gears"></i>
-                        </div>
-
+                        <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
                         <div>
                             <h3>Business & Operations Support</h3>
-                            <p>
-                                Helping businesses stay organized through process
-                                coordination, systems, documentation, and operational tasks.
-                            </p>
+                            <p>Helping businesses stay organized through process coordination, systems, documentation, and operational tasks.</p>
                         </div>
-
                     </article>
-
                     <article class="service-card reveal">
-
-                        <div class="service-icon">
-                            <i class="fa-solid fa-laptop-code"></i>
-                        </div>
-
+                        <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
                         <div>
                             <h3>Web & Digital Support</h3>
-                            <p>
-                                Website updates, WordPress, WooCommerce, content
-                                management, email design, and digital platform support.
-                            </p>
+                            <p>Website updates, WordPress, WooCommerce, content management, email design, and digital platform support.</p>
                         </div>
-
                     </article>
-
                     <article class="service-card reveal">
-
-                        <div class="service-icon">
-                            <i class="fa-solid fa-plane"></i>
-                        </div>
-
+                        <div class="service-icon"><i class="fa-solid fa-plane"></i></div>
                         <div>
                             <h3>Travel & Booking Support</h3>
-                            <p>
-                                Flight, hotel, cruise, insurance, itinerary,
-                                and travel coordination with attention to detail.
-                            </p>
+                            <p>Flight, hotel, cruise, insurance, itinerary, and travel coordination with attention to detail.</p>
                         </div>
-
                     </article>
-
                     <article class="service-card reveal">
-
-                        <div class="service-icon">
-                            <i class="fa-solid fa-headset"></i>
-                        </div>
-
+                        <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
                         <div>
                             <h3>Client & Customer Support</h3>
-                            <p>
-                                Professional communication, client follow-ups,
-                                inquiries, coordination, and relationship-focused support.
-                            </p>
+                            <p>Professional communication, client follow-ups, inquiries, coordination, and relationship-focused support.</p>
                         </div>
-
                     </article>
-
                 </div>
-
             </div>
-
         </section>
 
-        <!-- Experience -->
-
+        <!-- Experience Section -->
         <section class="section experience" id="experience">
-
             <div class="container">
-
                 <div class="section-head reveal">
-
-                    <div class="section-kicker">
-                        Experience
-                    </div>
-
-                    <h2>
-                        A versatile background built around support.
-                    </h2>
-
-                    <p>
-                        Supporting businesses across administration, operations, digital work, client coordination, and creative projects.
-                    </p>
-
+                    <div class="section-kicker">Experience</div>
+                    <h2>A versatile background built around support.</h2>
+                    <p>Supporting businesses across administration, operations, digital work, client coordination, and creative projects.</p>
                 </div>
-
                 <div class="timeline">
-
                     <div class="timeline-item reveal">
-
                         <div class="timeline-dot"></div>
-
-                        <div class="timeline-date">
-                            July 2025 – Present
-                        </div>
-
-                        <h3>
-                            Operations Supervisor
-                        </h3>
-
-                        <h4>
-                            ASICPlug & Travel with Brigitte
-                        </h4>
-
-                        <p>
-                            Provide administrative, operational, client, and digital support across two businesses in the cryptocurrency mining and travel industries. Manage competing priorities, coordinate business tasks, support client communications, and assist with website management, content, and day-to-day operations.
-                        </p>
-
+                        <div class="timeline-date">July 2025 – Present</div>
+                        <h3>Operations Supervisor</h3>
+                        <h4>ASICPlug & Travel with Brigitte</h4>
+                        <p>Provide administrative, operational, client, and digital support across two businesses in the cryptocurrency mining and travel industries. Manage competing priorities, coordinate business tasks, support client communications, and assist with website management, content, and day-to-day operations.</p>
                     </div>
-
                     <div class="timeline-item reveal">
-
                         <div class="timeline-dot"></div>
-
-                        <div class="timeline-date">
-                            October 2021 – Present
-                        </div>
-
-                        <h3>
-                            Executive Assistant
-                        </h3>
-
-                        <h4>
-                            Voice-Overs — Julie Williams
-
-                        </h4>
-
-                        <p>
-                            Support daily business operations through administrative assistance, online course development, Zoom coordination, web design, email marketing, social media management, graphic design, and video and audio editing.
-                        </p>
-
+                        <div class="timeline-date">October 2021 – Present</div>
+                        <h3>Executive Assistant</h3>
+                        <h4>Voice-Overs — Julie Williams</h4>
+                        <p>Support daily business operations through administrative assistance, online course development, Zoom coordination, web design, email marketing, social media management, graphic design, and video and audio editing.</p>
                     </div>
-
                     <div class="timeline-item reveal">
-
                         <div class="timeline-dot"></div>
-
-                        <div class="timeline-date">
-                            February 2023 – Present
-                        </div>
-
-                        <h3>
-                            Virtual Administrative Support
-                        </h3>
-
-                        <h4>
-                            Hey Momma Wellness, LLC
-                        </h4>
-
-                        <p>
-                            Provide administrative and creative support, including graphic design, podcast publishing, YouTube content management, Buzzsprout uploads, and digital content organization.
-                        </p>
-
+                        <div class="timeline-date">February 2023 – Present</div>
+                        <h3>Virtual Administrative Support</h3>
+                        <h4>Hey Momma Wellness, LLC</h4>
+                        <p>Provide administrative and creative support, including graphic design, podcast publishing, YouTube content management, Buzzsprout uploads, and digital content organization.</p>
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
-        <!-- Tools -->
-
+        <!-- Tools Section -->
         <section class="section tools" id="tools">
-
             <div class="container">
-
                 <div class="section-head reveal">
-
-                    <div class="section-kicker">
-                        Tools I Use
-                    </div>
-
-                    <h2>
-                        Comfortable across the tools businesses rely on.
-                    </h2>
-
-                    <p>
-                        A practical mix of communication, productivity,
-                        project management, CRM, marketing, web, finance,
-                        and digital media platforms.
-                    </p>
-
+                    <div class="section-kicker">Tools I Use</div>
+                    <h2>Comfortable across the tools businesses rely on.</h2>
+                    <p>A practical mix of communication, productivity, project management, CRM, marketing, web, finance, and digital media platforms.</p>
                 </div>
-
                 <div class="tools-grid">
-
                     <div class="tool-category reveal">
-
                         <div class="tool-category-head">
                             <h3>Communication & Collaboration</h3>
                             <span>01</span>
                         </div>
-
                         <div class="tool-list">
-
-                            <div class="tool">
-                                <i class="fa-brands fa-microsoft icon-outlook"></i>
-                                <span>Outlook</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-envelope icon-gmail"></i>
-                                <span>Gmail</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-brands fa-slack icon-slack"></i>
-                                <span>Slack</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-brands fa-microsoft icon-teams"></i>
-                                <span>Microsoft Teams</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-video icon-zoom"></i>
-                                <span>Zoom</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-video icon-meet"></i>
-                                <span>Google Meet</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-brands fa-discord icon-discord"></i>
-                                <span>Discord</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-brands fa-telegram icon-telegram"></i>
-                                <span>Telegram</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-brands fa-whatsapp icon-whatsapp"></i>
-                                <span>WhatsApp</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-phone icon-ooma"></i>
-                                <span>Ooma</span>
-                            </div>
-
+                            <div class="tool"><i class="fa-brands fa-microsoft icon-outlook"></i><span>Outlook</span></div>
+                            <div class="tool"><i class="fa-solid fa-envelope icon-gmail"></i><span>Gmail</span></div>
+                            <div class="tool"><i class="fa-brands fa-slack icon-slack"></i><span>Slack</span></div>
+                            <div class="tool"><i class="fa-brands fa-microsoft icon-teams"></i><span>Microsoft Teams</span></div>
+                            <div class="tool"><i class="fa-solid fa-video icon-zoom"></i><span>Zoom</span></div>
+                            <div class="tool"><i class="fa-solid fa-video icon-meet"></i><span>Google Meet</span></div>
+                            <div class="tool"><i class="fa-brands fa-discord icon-discord"></i><span>Discord</span></div>
+                            <div class="tool"><i class="fa-brands fa-telegram icon-telegram"></i><span>Telegram</span></div>
+                            <div class="tool"><i class="fa-brands fa-whatsapp icon-whatsapp"></i><span>WhatsApp</span></div>
+                            <div class="tool"><i class="fa-solid fa-phone icon-ooma"></i><span>Ooma</span></div>
                         </div>
-
                     </div>
-
                     <div class="tool-category reveal">
-
                         <div class="tool-category-head">
                             <h3>Productivity & Project Management</h3>
                             <span>02</span>
                         </div>
-
                         <div class="tool-list">
-
-                            <div class="tool">
-                                <i class="fa-brands fa-google icon-google"></i>
-                                <span>Google Workspace</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-brands fa-google-drive icon-drive"></i>
-                                <span>Google Drive</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-list-check icon-monday"></i>
-                                <span>Monday.com</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-list-check icon-trello"></i>
-                                <span>Trello</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-list-check icon-asana"></i>
-                                <span>Asana</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-list-check icon-clickup"></i>
-                                <span>ClickUp</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-note-sticky icon-notion"></i>
-                                <span>Notion</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-brands fa-dropbox icon-dropbox"></i>
-                                <span>Dropbox</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-calendar-check icon-upperlevel"></i>
-                                <span>UpperLevel</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-key icon-lastpass"></i>
-                                <span>LastPass</span>
-                            </div>
-
+                            <div class="tool"><i class="fa-brands fa-google icon-google"></i><span>Google Workspace</span></div>
+                            <div class="tool"><i class="fa-brands fa-google-drive icon-drive"></i><span>Google Drive</span></div>
+                            <div class="tool"><i class="fa-solid fa-list-check icon-monday"></i><span>Monday.com</span></div>
+                            <div class="tool"><i class="fa-solid fa-list-check icon-trello"></i><span>Trello</span></div>
+                            <div class="tool"><i class="fa-solid fa-list-check icon-asana"></i><span>Asana</span></div>
+                            <div class="tool"><i class="fa-solid fa-list-check icon-clickup"></i><span>ClickUp</span></div>
+                            <div class="tool"><i class="fa-solid fa-note-sticky icon-notion"></i><span>Notion</span></div>
+                            <div class="tool"><i class="fa-brands fa-dropbox icon-dropbox"></i><span>Dropbox</span></div>
+                            <div class="tool"><i class="fa-solid fa-calendar-check icon-upperlevel"></i><span>UpperLevel</span></div>
+                            <div class="tool"><i class="fa-solid fa-key icon-lastpass"></i><span>LastPass</span></div>
                         </div>
-
                     </div>
-
                     <div class="tool-category reveal">
-
                         <div class="tool-category-head">
                             <h3>CRM & Lead Generation</h3>
                             <span>03</span>
                         </div>
-
                         <div class="tool-list">
-
-                            <div class="tool">
-                                <i class="fa-solid fa-users icon-hubspot"></i>
-                                <span>HubSpot</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-bullseye icon-apollo"></i>
-                                <span>Apollo.io</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-magnifying-glass icon-rocketwork"></i>
-                                <span>RocketReach</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-calendar-check icon-upperlevel"></i>
-                                <span>Calendly</span>
-                            </div>
-
+                            <div class="tool"><i class="fa-solid fa-users icon-hubspot"></i><span>HubSpot</span></div>
+                            <div class="tool"><i class="fa-solid fa-bullseye icon-apollo"></i><span>Apollo.io</span></div>
+                            <div class="tool"><i class="fa-solid fa-magnifying-glass icon-rocketwork"></i><span>RocketReach</span></div>
+                            <div class="tool"><i class="fa-solid fa-calendar-check icon-upperlevel"></i><span>Calendly</span></div>
                         </div>
-
                     </div>
-
                     <div class="tool-category reveal">
-
                         <div class="tool-category-head">
                             <h3>Marketing & Email Platforms</h3>
                             <span>04</span>
                         </div>
-
                         <div class="tool-list">
-
-                            <div class="tool">
-                                <i class="fa-solid fa-envelope-open-text icon-mailchimp"></i>
-                                <span>Mailchimp</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-envelope icon-activecampaign"></i>
-                                <span>ActiveCampaign</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-graduation-cap icon-kajabi"></i>
-                                <span>Kajabi</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-calendar-check icon-upperlevel"></i>
-                                <span>Calendly</span>
-                            </div>
-
+                            <div class="tool"><i class="fa-solid fa-envelope-open-text icon-mailchimp"></i><span>Mailchimp</span></div>
+                            <div class="tool"><i class="fa-solid fa-envelope icon-activecampaign"></i><span>ActiveCampaign</span></div>
+                            <div class="tool"><i class="fa-solid fa-graduation-cap icon-kajabi"></i><span>Kajabi</span></div>
+                            <div class="tool"><i class="fa-solid fa-calendar-check icon-upperlevel"></i><span>Calendly</span></div>
                         </div>
-
                     </div>
-
                     <div class="tool-category reveal">
-
                         <div class="tool-category-head">
                             <h3>Web & E-Commerce</h3>
                             <span>05</span>
                         </div>
-
                         <div class="tool-list">
-
-                            <div class="tool">
-                                <i class="fa-brands fa-wordpress icon-wordpress"></i>
-                                <span>WordPress</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-cart-shopping icon-woo"></i>
-                                <span>WooCommerce</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-globe icon-wix"></i>
-                                <span>Wix</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-server icon-siteground"></i>
-                                <span>SiteGround</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-cloud icon-cloudflare"></i>
-                                <span>Cloudflare</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-globe icon-godaddy"></i>
-                                <span>GoDaddy</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-code icon-vs"></i>
-                                <span>Visual Studio</span>
-                            </div>
-
+                            <div class="tool"><i class="fa-brands fa-wordpress icon-wordpress"></i><span>WordPress</span></div>
+                            <div class="tool"><i class="fa-solid fa-cart-shopping icon-woo"></i><span>WooCommerce</span></div>
+                            <div class="tool"><i class="fa-solid fa-globe icon-wix"></i><span>Wix</span></div>
+                            <div class="tool"><i class="fa-solid fa-server icon-siteground"></i><span>SiteGround</span></div>
+                            <div class="tool"><i class="fa-solid fa-cloud icon-cloudflare"></i><span>Cloudflare</span></div>
+                            <div class="tool"><i class="fa-solid fa-globe icon-godaddy"></i><span>GoDaddy</span></div>
+                            <div class="tool"><i class="fa-solid fa-code icon-vs"></i><span>Visual Studio</span></div>
                         </div>
-
                     </div>
-
                     <div class="tool-category reveal">
-
                         <div class="tool-category-head">
                             <h3>Business & Finance</h3>
                             <span>06</span>
                         </div>
-
                         <div class="tool-list">
-
-                            <div class="tool">
-                                <i class="fa-solid fa-table icon-excel"></i>
-                                <span>Excel</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-file-powerpoint icon-powerpoint"></i>
-                                <span>PowerPoint</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-calculator icon-quickbooks"></i>
-                                <span>QuickBooks</span>
-                            </div>
-
+                            <div class="tool"><i class="fa-solid fa-table icon-excel"></i><span>Excel</span></div>
+                            <div class="tool"><i class="fa-solid fa-file-powerpoint icon-powerpoint"></i><span>PowerPoint</span></div>
+                            <div class="tool"><i class="fa-solid fa-calculator icon-quickbooks"></i><span>QuickBooks</span></div>
                         </div>
-
                     </div>
-
                     <div class="tool-category reveal">
-
                         <div class="tool-category-head">
                             <h3>Design & Creative</h3>
                             <span>07</span>
                         </div>
-
                         <div class="tool-list">
-
-                            <div class="tool">
-                                <i class="fa-solid fa-pen-nib icon-canva"></i>
-                                <span>Canva</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-brands fa-figma icon-figma"></i>
-                                <span>Figma</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-bezier-curve icon-illustrator"></i>
-                                <span>Adobe Illustrator</span>
-                            </div>
-
+                            <div class="tool"><i class="fa-solid fa-pen-nib icon-canva"></i><span>Canva</span></div>
+                            <div class="tool"><i class="fa-brands fa-figma icon-figma"></i><span>Figma</span></div>
+                            <div class="tool"><i class="fa-solid fa-bezier-curve icon-illustrator"></i><span>Adobe Illustrator</span></div>
                         </div>
-
                     </div>
-
                     <div class="tool-category reveal">
-
                         <div class="tool-category-head">
                             <h3>Podcast & Digital Media</h3>
                             <span>08</span>
                         </div>
-
                         <div class="tool-list">
-
-                            <div class="tool">
-                                <i class="fa-solid fa-microphone icon-riverside"></i>
-                                <span>Riverside</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-wand-magic-sparkles icon-castmagic"></i>
-                                <span>Castmagic.io</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-podcast icon-buzzsprout"></i>
-                                <span>Buzzsprout</span>
-                            </div>
-
-                            <div class="tool">
-                                <i class="fa-solid fa-waveform-lines icon-audacity"></i>
-                                <span>Audacity</span>
-                            </div>
-
+                            <div class="tool"><i class="fa-solid fa-microphone icon-riverside"></i><span>Riverside</span></div>
+                            <div class="tool"><i class="fa-solid fa-wand-magic-sparkles icon-castmagic"></i><span>Castmagic.io</span></div>
+                            <div class="tool"><i class="fa-solid fa-podcast icon-buzzsprout"></i><span>Buzzsprout</span></div>
+                            <div class="tool"><i class="fa-solid fa-waveform-lines icon-audacity"></i><span>Audacity</span></div>
                         </div>
-
                     </div>
-
                 </div>
-
                 <div class="tools-bottom reveal">
-
                     <div>
                         <strong>40+ digital tools used</strong>
-                        <span>
-                            Adaptable to new platforms, systems, and business workflows.
-                        </span>
+                        <span>Adaptable to new platforms, systems, and business workflows.</span>
                     </div>
-
                     <i class="fa-solid fa-arrow-right"></i>
-
                 </div>
-
             </div>
-
         </section>
 
-        <!-- Portfolio -->
-
+        <!-- Portfolio Section -->
         <section class="section portfolio" id="work">
-
             <div class="container">
-
                 <div class="section-head reveal">
-
-                    <div class="section-kicker">
-                        Portfolio
-                    </div>
-
-                    <h2>
-                        A glimpse of my work.
-                    </h2>
-
-                    <p>
-                        Selected samples showcasing my experience in web design,
-                        WordPress, and digital content.
-                    </p>
-
+                    <div class="section-kicker">Portfolio</div>
+                    <h2>A glimpse of my work.</h2>
+                    <p>Selected samples showcasing my experience in web design, WordPress, and digital content.</p>
                 </div>
-
                 <div class="portfolio-showcase">
-
-                    <!-- Website Screenshot 01 -->
-
                     <div class="portfolio-photo reveal">
-
-                        <img
-                            src="https://i.ibb.co/4wspR03x/Homepage.png"
-                            alt="Website Homepage Design"
-                        >
-
+                        <img src="https://i.ibb.co/4wspR03x/Homepage.png" alt="Website Homepage Design">
                     </div>
-
-                    <!-- Website Screenshot 02 -->
-
                     <div class="portfolio-photo reveal">
-
-                        <img
-                            src="https://i.ibb.co/1G7V2w5v/About-Us.png"
-                            alt="Website About Us Design"
-                        >
-
+                        <img src="https://i.ibb.co/1G7V2w5v/About-Us.png" alt="Website About Us Design">
                     </div>
-
-                    <!-- Website Screenshot 03 -->
-
                     <div class="portfolio-photo reveal">
-
-                        <img
-                            src="https://i.ibb.co/KxmHvKNW/Homepage.png"
-                            alt="Website Homepage Design"
-                        >
-
+                        <img src="https://i.ibb.co/KxmHvKNW/Homepage.png" alt="Website Homepage Design">
                     </div>
-
-                    <!-- Website Screenshot 04 -->
-
                     <div class="portfolio-photo reveal">
-
-                        <img
-                            src="https://i.ibb.co/VWDpzy0X/contactus.png"
-                            alt="Website Contact Page Design"
-                        >
-
+                        <img src="https://i.ibb.co/VWDpzy0X/contactus.png" alt="Website Contact Page Design">
                     </div>
-
-                    <!-- Website Screenshot 05 -->
-
                     <div class="portfolio-photo reveal">
-
-                        <img
-                            src="https://i.ibb.co/zTtygsmY/fullpage-snapshot-voiceactorrx-com-2026-10-04-15-36-37.png"
-                            alt="Full Website Design"
-                        >
-
+                        <img src="https://i.ibb.co/zTtygsmY/fullpage-snapshot-voiceactorrx-com-2026-10-04-15-36-37.png" alt="Full Website Design">
                     </div>
-
                 </div>
-
-                <div class="portfolio-label reveal">
-
-                    <span>
-                        Web / WordPress Design
-                    </span>
-
-                    <i class="fa-solid fa-arrow-down"></i>
-
-                </div>
-
             </div>
-
         </section>
 
-        <!-- Testimonials -->
-
+        <!-- Testimonials Section -->
         <section class="section testimonials" id="testimonials">
-
             <div class="container">
-
                 <div class="section-head reveal">
-
-                    <div class="section-kicker">
-                        Testimonials
-                    </div>
-
-                    <h2>
-                        What clients have to say.
-                    </h2>
-
-                    <p>
-                        A few words from the businesses and clients I’ve had the opportunity to support.
-                    </p>
-
+                    <div class="section-kicker">Testimonials</div>
+                    <h2>What clients have to say.</h2>
+                    <p>A few words from the businesses and clients I’ve had the opportunity to support.</p>
                 </div>
-
                 <div class="testimonial-wrap reveal">
-
                     <div class="testimonial-track">
-
                         <article class="testimonial-card">
-
-                            <div class="testimonial-quote">
-                                <i class="fa-solid fa-quote-left"></i>
-                            </div>
-
+                            <div class="testimonial-quote"><i class="fa-solid fa-quote-left"></i></div>
                             <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                             </div>
-
                             <blockquote>
-
                                 “I’ve worked with Zhenddie for over three and a half years,
                                 and she has become such an important part of the behind-the-scenes
                                 of my business. She helps me with everything from Canva graphics
                                 to editing and publishing my podcast and YouTube videos, and she
                                 takes so much off my plate every single week.
-
                                 <br><br>
-
                                 One of the things I appreciate most about her is her communication.
                                 She’s responsive, dependable, and if I have a question or need
                                 something changed, I know I’ll hear back from her.
-
                                 <br><br>
-
                                 As a creative business owner, I have a lot of ideas and a lot
                                 of moving pieces. Having someone I trust to take care of the
                                 details saves me hours and gives me the space to focus on the
                                 things I need to be doing as the CEO of my business.
-
                                 <br><br>
-
                                 After working together for almost four years, I can honestly
                                 say I don’t know what I would do without her. She makes running
                                 my business easier, and that is incredibly valuable to me.”
-
                             </blockquote>
-
                             <div class="testimonial-person">
-
                                 <div class="testimonial-avatar">
-
-                                    <img
-                                        src="https://i.ibb.co/xqSTKQdF/Cam-Oyler.png"
-                                        alt="Cam Oyler"
-                                    >
-
+                                    <img src="https://i.ibb.co/xqSTKQdF/Cam-Oyler.png" alt="Cam Oyler">
                                 </div>
-
                                 <div>
                                     <strong>Cam Oyler</strong>
                                     <span>CEO, Owner Hey Momma Wellness, LLC</span>
                                 </div>
-
                             </div>
-
                         </article>
 
-                       <!-- <article class="testimonial-card">
+                 <article class="testimonial-card">
 
                             <div class="testimonial-quote">
                                 <i class="fa-solid fa-quote-left"></i>
@@ -2263,483 +1639,234 @@
                             </div>
 
                             <blockquote>
-                                “Client testimonial will be added here.”
+                                Zhenddie has been an incredible assistant for me for five years, now, and I could not speak more highly of her!
+                                <br><br>
+                                She’s an extremely reliable, self-starter, who always meets deadlines. She’s also resourceful – often suggesting ways to save money on different services.
+                                <br><br>
+                                Her offerings are diverse. She’s created marketing emails for me, managed Zoom webinars start to finish, gathered prospects, handled multiple CRM lists, invoiced clients, and graduated from Larry Hudson‘s acclaimed audio editing and processing course.
+                                <br><br>
+                                If Zhenddie does not have the skills to perform a task – she proactively pursue learning that skill very quickly. Her contributions to my business have been priceless! 
                             </blockquote>
 
                             <div class="testimonial-person">
 
                                 <div class="testimonial-avatar">
-                                    CN
+                                    <img src="https://i.ibb.co/0p4KXLW4/Julie-Williams.png" alt="Julie Williams" border="0">
                                 </div>
 
                                 <div>
-                                    <strong>Client Name</strong>
-                                    <span>Position · Company</span>
+                                    <strong>Julie Williams</strong>
+                                    <span>Voiceover Coach</span>
                                 </div>
 
                             </div>
 
                         </article>
-                        -->
                         
-                        <!--
-                        <article class="testimonial-card">
 
-                            <div class="testimonial-quote">
-                                <i class="fa-solid fa-quote-left"></i>
-                            </div>
-
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-
-                            <blockquote>
-                                “Client testimonial will be added here.”
-                            </blockquote>
-
-                            <div class="testimonial-person">
-
-                                <div class="testimonial-avatar">
-                                    CN
-                                </div>
-
-                                <div>
-                                    <strong>Client Name</strong>
-                                    <span>Position · Company</span>
-                                </div>
-
-                            </div>
-
-                        </article>
-                        -->
 
                     </div> 
-
                 </div>
-
                 <div class="testimonial-controls">
-
-                    <button
-                        class="testimonial-arrow prev"
-                        aria-label="Previous testimonial"
-                    >
-                        <i class="fa-solid fa-arrow-left"></i>
-                    </button>
-
+                    <button class="testimonial-arrow prev" aria-label="Previous testimonial"><i class="fa-solid fa-arrow-left"></i></button>
                     <div class="testimonial-dots">
-
-                        <button
-                            class="testimonial-dot active"
-                            aria-label="Testimonial 1"
-                        ></button>
-
-                        <button
-                            class="testimonial-dot"
-                            aria-label="Testimonial 2"
-                        ></button>
-
-                        <button
-                            class="testimonial-dot"
-                            aria-label="Testimonial 3"
-                        ></button>
-
+                        <button class="testimonial-dot active" aria-label="Testimonial 1"></button>
+                        <button class="testimonial-dot" aria-label="Testimonial 2"></button>
+                        <button class="testimonial-dot" aria-label="Testimonial 3"></button>
                     </div>
-
-                    <button
-                        class="testimonial-arrow next"
-                        aria-label="Next testimonial"
-                    >
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-
+                    <button class="testimonial-arrow next" aria-label="Next testimonial"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
-
             </div>
-
         </section>
 
-        <!-- Contact -->
-
+        <!-- Contact Section -->
         <section class="section contact" id="contact">
-
             <div class="container contact-grid">
-
                 <div class="reveal">
-
-                    <div class="section-kicker">
-                        Let’s Talk
-                    </div>
-
-                    <h2>
-                        Need someone reliable behind the scenes?
-                    </h2>
-
+                    <div class="section-kicker">Let’s Talk</div>
+                    <h2>Need someone reliable behind the scenes?</h2>
                     <p>
                         Whether you need executive assistance, operational support,
                         travel coordination, client service, or digital help,
                         I’d be happy to discuss how I can support you or your business.
                     </p>
-
                     <div class="contact-actions">
-
-                        <a
-                            href="mailto:cinco.zhenddie1998@gmail.com"
-                            class="btn btn-primary"
-                        >
+                        <a href="mailto:cinco.zhenddie1998@gmail.com" class="btn btn-primary">
                             <i class="fa-solid fa-envelope"></i>
                             Get in Touch
                         </a>
-
                     </div>
-
                 </div>
-
                 <div class="contact-card reveal">
-
                     <div class="contact-item">
-
                         <i class="fa-solid fa-envelope"></i>
-
                         <div>
                             <strong>Email</strong>
                             <span>cinco.zhenddie1998@gmail.com</span>
                         </div>
-
                     </div>
-
                     <div class="contact-item">
-
                         <i class="fa-solid fa-briefcase"></i>
-
                         <div>
                             <strong>Availability</strong>
                             <span>Open to professional opportunities</span>
                         </div>
-
                     </div>
-
                     <div class="contact-item">
-
                         <i class="fa-solid fa-location-dot"></i>
-
                         <div>
                             <strong>Based In</strong>
                             <span>Philippines · Supporting clients remotely</span>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </section>
-
     </main>
 
     <!-- Footer -->
-
     <footer>
-
         <div class="container footer-inner">
-
-            <div>
-                © 2026 Zhenddie Cinco. All rights reserved.
-            </div>
-
+            <div>© 2026 Zhenddie Cinco. All rights reserved.</div>
             <div class="footer-social">
-
-                <a href="https://www.linkedin.com/in/zhenddiecinco/" aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-
-                <a href="https://www.facebook.com/zeecinco1" aria-label="Facebook">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-
-                <a href="https://www.instagram.com/zeecinco_/" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-
+                <a href="https://www.linkedin.com/in/zhenddiecinco/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.facebook.com/zeecinco1" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/zeecinco_/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             </div>
-
         </div>
-
     </footer>
 
+    <!-- JavaScript -->
     <script>
-
         /* Mobile Menu */
-
         const menuToggle = document.querySelector(".menu-toggle");
         const navLinks = document.querySelector(".nav-links");
         const menuIcon = menuToggle.querySelector("i");
 
         menuToggle.addEventListener("click", () => {
-
             navLinks.classList.toggle("open");
             document.body.classList.toggle("menu-open");
-
             if (navLinks.classList.contains("open")) {
                 menuIcon.className = "fa-solid fa-xmark";
             } else {
                 menuIcon.className = "fa-solid fa-bars";
             }
-
         });
 
         document.querySelectorAll(".nav-links a").forEach(link => {
-
             link.addEventListener("click", () => {
-
                 navLinks.classList.remove("open");
                 document.body.classList.remove("menu-open");
                 menuIcon.className = "fa-solid fa-bars";
-
             });
-
         });
 
-
         /* Hero Typing Effect */
-
         const textArray = [
             "Hello, I'm Zhenddie.",
             "Your Reliable Business Support Partner."
         ];
-
         let textIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
-
         const typed = document.querySelector(".typed");
 
         function typeEffect() {
-
             const currentText = textArray[textIndex];
-
-            typed.textContent =
-                currentText.substring(0, charIndex);
+            typed.textContent = currentText.substring(0, charIndex);
 
             if (!isDeleting) {
-
                 charIndex++;
-
                 if (charIndex > currentText.length) {
-
                     isDeleting = true;
-
                     setTimeout(typeEffect, 1600);
-
                     return;
                 }
-
             } else {
-
                 charIndex--;
-
                 if (charIndex === 0) {
-
                     isDeleting = false;
-                    textIndex =
-                        (textIndex + 1) % textArray.length;
-
+                    textIndex = (textIndex + 1) % textArray.length;
                 }
-
             }
-
-            setTimeout(
-                typeEffect,
-                isDeleting ? 45 : 75
-            );
+            setTimeout(typeEffect, isDeleting ? 45 : 75);
         }
-
         typeEffect();
 
-
         /* Testimonial Carousel */
-
-        const testimonialTrack =
-            document.querySelector(".testimonial-track");
-
-        const testimonialDots =
-            document.querySelectorAll(".testimonial-dot");
-
-        const previousButton =
-            document.querySelector(".testimonial-arrow.prev");
-
-        const nextButton =
-            document.querySelector(".testimonial-arrow.next");
-
-        const testimonialWrap =
-            document.querySelector(".testimonial-wrap");
-
+        const testimonialTrack = document.querySelector(".testimonial-track");
+        const testimonialDots = document.querySelectorAll(".testimonial-dot");
+        const previousButton = document.querySelector(".testimonial-arrow.prev");
+        const nextButton = document.querySelector(".testimonial-arrow.next");
+        const testimonialWrap = document.querySelector(".testimonial-wrap");
         let currentTestimonial = 0;
         let autoRotate;
 
         function showTestimonial(index) {
-
-            currentTestimonial =
-                (index + 3) % 3;
-
-            testimonialTrack.style.transform =
-                `translateX(-${currentTestimonial * 100}%)`;
-
+            currentTestimonial = (index + 3) % 3;
+            testimonialTrack.style.transform = `translateX(-${currentTestimonial * 100}%)`;
             testimonialDots.forEach((dot, index) => {
-
-                dot.classList.toggle(
-                    "active",
-                    index === currentTestimonial
-                );
-
+                dot.classList.toggle("active", index === currentTestimonial);
             });
-
         }
 
         function startAutoRotate() {
-
             clearInterval(autoRotate);
-
             autoRotate = setInterval(() => {
-
-                showTestimonial(
-                    currentTestimonial + 1
-                );
-
+                showTestimonial(currentTestimonial + 1);
             }, 6000);
-
         }
 
         previousButton.addEventListener("click", () => {
-
-            showTestimonial(
-                currentTestimonial - 1
-            );
-
+            showTestimonial(currentTestimonial - 1);
             startAutoRotate();
-
         });
 
         nextButton.addEventListener("click", () => {
-
-            showTestimonial(
-                currentTestimonial + 1
-            );
-
+            showTestimonial(currentTestimonial + 1);
             startAutoRotate();
-
         });
 
         testimonialDots.forEach((dot, index) => {
-
             dot.addEventListener("click", () => {
-
                 showTestimonial(index);
                 startAutoRotate();
-
             });
-
         });
 
-        testimonialWrap.addEventListener(
-            "mouseenter",
-            () => {
-                clearInterval(autoRotate);
-            }
-        );
-
-        testimonialWrap.addEventListener(
-            "mouseleave",
-            () => {
-                startAutoRotate();
-            }
-        );
-
+        testimonialWrap.addEventListener("mouseenter", () => { clearInterval(autoRotate); });
+        testimonialWrap.addEventListener("mouseleave", () => { startAutoRotate(); });
 
         /* Testimonial Touch Swipe */
-
         let touchStartX = 0;
+        testimonialWrap.addEventListener("touchstart", event => {
+            touchStartX = event.changedTouches[0].screenX;
+        }, { passive: true });
 
-        testimonialWrap.addEventListener(
-            "touchstart",
-            event => {
-
-                touchStartX =
-                    event.changedTouches[0].screenX;
-
-            },
-            {
-                passive: true
+        testimonialWrap.addEventListener("touchend", event => {
+            const touchEndX = event.changedTouches[0].screenX;
+            const difference = touchStartX - touchEndX;
+            if (Math.abs(difference) > 50) {
+                showTestimonial(currentTestimonial + (difference > 0 ? 1 : -1));
+                startAutoRotate();
             }
-        );
-
-        testimonialWrap.addEventListener(
-            "touchend",
-            event => {
-
-                const touchEndX =
-                    event.changedTouches[0].screenX;
-
-                const difference =
-                    touchStartX - touchEndX;
-
-                if (Math.abs(difference) > 50) {
-
-                    showTestimonial(
-                        currentTestimonial +
-                        (difference > 0 ? 1 : -1)
-                    );
-
-                    startAutoRotate();
-
-                }
-
-            },
-            {
-                passive: true
-            }
-        );
+        }, { passive: true });
 
         startAutoRotate();
 
-
         /* Scroll Reveal */
-
-        const revealObserver =
-            new IntersectionObserver(
-                entries => {
-
-                    entries.forEach(entry => {
-
-                        if (entry.isIntersecting) {
-
-                            entry.target.classList.add("visible");
-
-                            revealObserver.unobserve(
-                                entry.target
-                            );
-
-                        }
-
-                    });
-
-                },
-                {
-                    threshold: 0.12
+        const revealObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    revealObserver.unobserve(entry.target);
                 }
-            );
+            });
+        }, { threshold: 0.12 });
 
         document.querySelectorAll(".reveal").forEach(element => {
-
             revealObserver.observe(element);
-
         });
-
     </script>
-
 </body>
 </html>
